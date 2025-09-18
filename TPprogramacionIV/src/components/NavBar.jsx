@@ -3,15 +3,17 @@ import logo from '../img/logoempresa.png';
 
 function Navbar() {
   return (
-    <div className="navbar">
-      <img src={logo} alt="InfinityTech Logo" className="logo" />
-      <h1>InfinityTech</h1>
-      <ul>
-        <li>Inicio</li>
-        <li>Productos</li>
-        <li>Contacto</li>
+    <nav className="navbar">
+      <div className="logo-container">
+        <img src={logo} alt="InfinityTech Logo" className="logo" />
+        <span className="brand-name">InfinityTech</span>
+      </div>
+      <ul className="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
-    </div>
+    </nav>
   );
 }
 
