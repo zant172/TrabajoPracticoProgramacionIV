@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f172a;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.navbar .logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+  object-fit: contain;
+}
+
+header .navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+header .navbar li {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header .navbar li:hover {
+  color: #1d9bf0;
+}
+
+main.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #0f172a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card button:hover {
+  background: #1d9bf0;
+}
+
+footer .footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0f172a;
+  color: #fff;
+  margin-top: 2rem;
+}

@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Navbar from './components/Navbar';
+import ProductCard from './components/ProductCard';
+import Footer from './components/Footer';
+
+const products = [
+  { id: 1, name: "RTX 4090", price: 150000, img: "https://via.placeholder.com/200" },
+  { id: 2, name: "Ryzen 9 7900X", price: 90000, img: "https://via.placeholder.com/200" },
+  { id: 3, name: "SSD 2TB NVMe", price: 45000, img: "https://via.placeholder.com/200" },
+  { id: 4, name: "Monitor 4K 27''", price: 85000, img: "https://via.placeholder.com/200" }
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+        <Navbar />
+      </header>
+
+      <main className="product-grid">
+        {products.map(product => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
